@@ -1,0 +1,71 @@
+---
+id: 6-shared-transaction-create
+title: "6. Shared Transaction create"
+description: "This API used to create shared transaction"
+sidebar_label: "6. Shared Transaction create"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVlFv2zYQ/ivCPW2AbIuSLFt6KJBs3RBg7bwk3R6CYDiRJ4utLKkklcYz/N+Hk5TWdtoAy5C36sUyebzvxPvuu9uBw7WF7AYk2nJiydxpSdZ75dkSDamJM1hblE43tffKk4bQEdz6oMhKo1tehwyuS229s9WF11lSnmtGw9GJd+AEfGAQMgy6g85UkEHpXGuz2YxjmIYTQw51tSY008asZ9jq2Z2A/a0Phj52ZN15o7aQ7UA2taPa8Su2baUlMsTsveWgdmBlSRvkN7dtCTJo8vckHfhA97hpK+Itfd5ZXZO1FwoymOfpsoijSC1kjkUYRkEYKZlG4IP+rRn894ZJlBPFVORzEcfpPJHxIg+CFNnwr8Z8sO7ANl7EMcUizAOZCJFSEqBYpinbPqCv0LiazGCfhCJQMihiQfNlvkzlghbpMviK/UlMc5FEQZIsozhO8iIq0iAOouLw3PGBMMoTtYwDUiIIwmUaRFEczxPwAS8cbYYctaZRnXRvu01OBjJYDf8vlCe8Xyj3UClS3husO6yqLSe442SQ+fmII33mq0rX65XRkiATaepD/Se6S+ZUlvrQdkaWaGk04P3mIfBzg7WCbLf3oTkzTsuKfjVN1w5L9R8d1k67LWTCh9dnbwfA+g2ata4hE9N56MNaFw6yAitLPthSt3/Lxj6s7G/3/PjQosENuQeK1rhh7txPsHPlpGeSD+wTSkJFhr/rlGjWGV2vYX/AtBMHzGRtSEHmTEd7/xBHSrJ28oG2zwMSYTTk8AkMS9KQ+78Yi2UqAiFEKCIRi/lTkI1ZY63/6bk30ep5qNumM96hJ08r7ynUw+J+PmI+Ovk6Wi9Ltm1qS5a9hUHAP8cCedX1SS26ynswBubahlzZcCm2TETmnishg9lj9Z2BDyxsl18k8PV3FfuuYo9VjIleND2xtetZfDV+incenntnbQun/fvYYHUBPnCLHjbFNJgGXBbM0Q32rXWsr2TqXQ0t/vpgThinhBOQg3b93+aFsTwd3btZW6GuOZZ+cNiN9XIDj+sFfOA5peyv5gZ2uxwtvTPVfs/LHzsyW8hubn24Q6Mx53u64bsb9YEpo7TlDfX5sr/5PT9cjprwo/etgFlqT5vAHVYdWwJL1sugHfaSl4c7aisvDfe4pbw04nE7OUIbDH4afE6uj/P7aDjlpvFZ+le/X12DD/k41G4axWcMfuJeg58GDWj6uPsG06/toMJ63eGabQef/PwLnW/kIA==
+sidebar_class_name: "post api-method"
+info_path: docs/api/supplier/supplier-b-2-b-app
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"6. Shared Transaction create"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/shared-transaction/"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API used to create shared transaction
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"x-auth-type","in":"header","schema":{"type":"string"},"example":"x-auth-type","required":true},{"name":"x-access-key","in":"header","schema":{"type":"string"},"example":"123456","required":true},{"name":"x-secret-key","in":"header","schema":{"type":"string"},"example":"123456789101112131415","required":true},{"name":"organization-id","in":"header","schema":{"type":"string"},"example":"your organization id ","required":true},{"name":"iBusinessId","in":"header","schema":{"type":"string"},"example":"your business id ","required":true}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"iBusinessId":"5b98f433d7cbaf223023dc93","iLocationId":"63bee4efb5144956c47b009a","iWorkstationId":"64744e412b0c6119e60a1899","iBusinessPartnerId":"66210dc0f41e58b89c7e7980","iBusinessPartnerLocationId":"63516306683446bf3f90403f","iBusinessLocationId":"623b6d840ed1002890334456","aItems":[{"productNumber":"ProductId 1 Feb added Manually","supplierDescription":"","sellingPrice":199,"nVatRate":9,"purchasePrice":99,"oBusinessBrand":{},"oArticleGroup":{},"nQuantity":1,"EAN":"","nMargin":1.52,"gift":false,"ship_cost":false}]}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response"}}}
+>
+  
+</StatusCodes>
+
+
+      

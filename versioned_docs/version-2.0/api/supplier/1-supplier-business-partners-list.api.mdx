@@ -1,0 +1,71 @@
+---
+id: 1-supplier-business-partners-list
+title: "1. Supplier Business Partners List"
+description: "1. Supplier business partners list API"
+sidebar_label: "1. Supplier Business Partners List"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVU1vm0AQ/StoTq2EDfgz5RAprnqIVLVRk/Zi5TCGwWzCx2Z3ceIi//dqFnCxo1pVKkvlAoLZ9+brPWowuNYQLiEqFQ00qY2ISDuXjq6kzAQp59JZVVoUpLUjUZmClJMJbeDehZh0pIQ0oiwghGDo3HaHjo9oe8a5urkGF5iFFLPWUKkMQkiNkTr0PE5iGAwUGRTZmlANS7X2UApvE8Du3gVFTxVpsyjjLYQ1RGVhqDD8iMwcIefiPWhOqAYdpZQjP5mtJAihXD1QZMAFesFcZmSDHoWE0HchE7kwEAa+C2LR5n8dQwiz8SxKpvOL+TiZT1Z+koxnU38SIOPcNcAxJVhljKxLZRZbCEF/wZxstaii9AdmFQdCD3yhsIiZYXm/48sFiQpzMl1zCkYI4WWAlUkHtgYXBPc6JYxJMfpxidooUaxh16uRAaKItB480haaJgpFMYRGVbRz+0T9uDcwBaPxZDo7zaEpUmT+lWN+8SHwgyAYBeNgEkxPUZZqjYX4aXdjIOK3sW7LSjl9JEfEzinW/g69nXGP4tjEj9isIrQsC02a0Ua+z7dDXd5WdqhJlTldMPCy5WTSkvdblpo3V6JJIQSv067XadezeneBZfXttwA//W8a4i4npe2qMLaFez9ajBbOlZRw7FmHAdad2Jo6Q/OHPs+EG5SjtZR2uH2v20/opvO6z02/Dqh6ZvX3Ttluh6EX48kMRcHZWMus23EtoQOwE2wggAfRWHTKsw2XUNcr1PRdZbsdv36qSG25aS5sUAlccbtsC9sdZfuJheYPMYQJZppOFPTuW7uX750/Zc1yP7ayTTdQls152Pp+dn66A2s7N91rWzs346GlHbA1AR8bzMHd4Xxf/ZvZuPb2c/P19g5cWLX/9LyM+YzCZ/Y7fG4EX9q8rcnZdzVkWKwrXHNsg8nXL1Zu84Q=
+sidebar_class_name: "post api-method"
+info_path: docs/api/supplier/supplier-b-2-b-app
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"1. Supplier Business Partners List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/business/partners/list"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+1. Supplier business partners list API
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"x-auth-type","in":"header","schema":{"type":"string"},"example":"x-access-key","required":true},{"name":"x-access-key","in":"header","schema":{"type":"string"},"example":"123456","required":true},{"name":"x-secret-key","in":"header","schema":{"type":"string"},"example":"123456789101112131415","required":true},{"name":"organization-id","in":"header","schema":{"type":"string"},"example":"your organization id ","required":true},{"name":"iBusinessId","in":"header","schema":{"type":"string"},"example":"your iBusiness id","required":true}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"skip":0,"limit":10,"iBusinessId":"636cf57873f74b0ff365041a","eType":"default","sortBy":"sName","searchValue":"","iBusinessBrandId":[]}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response"}}}
+>
+  
+</StatusCodes>
+
+
+      

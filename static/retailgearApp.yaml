@@ -1,0 +1,504 @@
+openapi: 3.0.0
+info:
+  title: Retailgear App 
+  description: Retailgear API
+  version: ${API_VERSION}
+
+servers:
+  - url: 'https://core.1-retailgear.org/api/v1'
+    description: Core API server for managing business partner data
+  - url: 'https://cash.2-retailgear.org/api/v1'
+    description: Cash API server for managing stock and payments
+
+paths:
+  /business/partners/list:
+    post:
+      tags:
+        - core-services > supplier > business partner list
+      summary: 1. Supplier Business Partners List
+      description: 1. Supplier business partners list API
+      servers:
+      - url: 'https://core.1-retailgear.org/api/v1'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: 
+               {
+                  "skip": 0,
+                  "limit": 10,
+                  "iBusinessId": "636cf57873f74b0ff365041a",
+                  "eType": "default",
+                  "sortBy": "sName",
+                  "searchValue": "",
+                  "iBusinessBrandId": []
+              }
+      parameters:
+        - name : x-auth-type
+          in: header
+          schema:
+            type: string
+          example: 'x-access-key'
+          required: true
+        - name: x-access-key
+          in: header
+          schema:
+            type: string
+          example: '123456'
+          required: true
+        - name: x-secret-key
+          in: header
+          schema:
+            type: string
+          example: '123456789101112131415'
+          required: true
+        - name: organization-id
+          in: header
+          schema:
+            type: string
+          example: 'your organization id '
+          required: true
+        - name: iBusinessId
+          in: header
+          schema:
+            type: string
+          example: 'your iBusiness id'
+          required: true
+      responses:
+        '200':
+          description: Successful response
+
+  /stock-list/{iBusinessId}:
+    post:
+      tags:
+        - core-services > stock-list
+      summary: 2. Supplier Stock List
+      description: This API fetches the supplier stock list for a given business.
+      servers:
+      - url: 'https://core.1-retailgear.org/api/v1'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+               {
+                  "iBusinessId": "5b98f433d7cbaf223023dc93",
+                  "iLocationId": "63bedf9fb5144956c47a562d",
+                  "id": "651e91bdda893d452ca235c0",
+                  "bShowProductWithStock": false,
+                  "csvExport": false,
+                  "limit": 10,
+                  "oFilterBy": {
+                      "iBusinessPartnerId": [
+                          "651e91bdda893d452ca235c0"
+                      ]
+                  },
+                  "skip": 0
+              }
+      parameters:
+        - name: x-auth-type
+          in: header
+          schema:
+            type: string
+          example: 'x-auth-type'
+          required: true
+        - name: x-access-key
+          in: header
+          schema:
+            type: string
+          example: '123456'
+          required: true
+        - name: x-secret-key
+          in: header
+          schema:
+            type: string
+          example: '123456789101112131415'
+          required: true
+        - name: organization-id
+          in: header
+          schema:
+            type: string
+          example: 'your organization id '
+          required: true
+        - name: iBusinessId
+          in: path
+          schema:
+            type: string
+          example: 'your iBusiness id'
+          required: true
+      responses:
+        '200':
+          description: Successful response
+
+  /sales-list/{iBusinessId}/supplier:
+    post:
+      tags:
+        - cash-services > sales-list
+      summary: 3. Supplier Sales list
+      description: This API fetches the supplier sales list for a given business.
+      servers:
+      - url: 'https://cash.2-retailgear.org/api/v1'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                {
+                    "filterDates": {},
+                    "iBusinessId": "5b98f433d7cbaf223023dc93",
+                    "iSupplierId": "6423ec3b429d955fe52a8937",
+                    "id": "651e91bdda893d452ca235c0",
+                    "limit": 25,
+                    "oFilterBy": {
+                        "iBusinessPartnerId": [
+                            "651e91bdda893d452ca235c0"
+                        ]
+                    },
+                    "skip": 0,
+                    "sortBy": "dCreatedDate",
+                    "sortOrder": "asc"
+                }
+      parameters:
+        - name: x-auth-type
+          in: header
+          schema:
+            type: string
+          example: 'x-auth-type'
+          required: true
+        - name: x-access-key
+          in: header
+          schema:
+            type: string
+          example: '123456'
+          required: true
+        - name: x-secret-key
+          in: header
+          schema:
+            type: string
+          example: '123456789101112131415'
+          required: true
+        - name: organization-id
+          in: header
+          schema:
+            type: string
+          example: 'your organization id '
+          required: true
+        - name: iBusinessId
+          in: path
+          schema:
+            type: string
+          example: 'your iBusiness id'
+          required: true
+      responses:
+        '200':
+          description: Successful response
+
+  /transaction/list:
+    post:
+      tags:
+        - cash-services > transaction > list
+      summary: 4. Transaction List
+      description: This API fetches the transaction list
+      servers:
+      - url: 'https://cash.2-retailgear.org/api/v1'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+               {
+                  "iBusinessId":"5b98f433d7cbaf223023dc93",
+
+                  "bIsDetailRequire": true,
+
+                  "limit": 10,
+                  "oFilterBy": {"iBusinessPartnerId": "646353592971046900aaea1b"},
+                  "skip":0
+               }
+      parameters:
+        - name: x-auth-type
+          in: header
+          schema:
+            type: string
+          example: 'x-auth-type'
+          required: true
+        - name: x-access-key
+          in: header
+          schema:
+            type: string
+          example: '123456'
+          required: true
+        - name: x-secret-key
+          in: header
+          schema:
+            type: string
+          example: '123456789101112131415'
+          required: true
+        - name: organization-id
+          in: header
+          schema:
+            type: string
+          example: 'your organization id '
+          required: true
+      responses:
+        '200':
+          description: Successful response
+
+  /shared-transaction/list:
+    post:
+      tags:
+        - cash-services > shared-transaction > list
+      summary: 5. Shared Transaction List
+      description: This API fetches the shared transaction list
+      servers:
+      - url: 'https://cash.2-retailgear.org/api/v1'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                {
+                    "iBusinessId": "5b98f433d7cbaf223023dc93",
+                    "eType": "purchase-order-supplier"
+                }
+      parameters:
+        - name: x-auth-type
+          in: header
+          schema:
+            type: string
+          example: 'x-auth-type'
+          required: true
+        - name: x-access-key
+          in: header
+          schema:
+            type: string
+          example: '123456'
+          required: true
+        - name: x-secret-key
+          in: header
+          schema:
+            type: string
+          example: '123456789101112131415'
+          required: true
+        - name: organization-id
+          in: header
+          schema:
+            type: string
+          example: 'your organization id '
+          required: true
+        - name: iBusinessId
+          in: header
+          schema:
+            type: string
+          example: 'your business id '
+          required: true
+      responses:
+        '200':
+          description: Successful response
+
+  /shared-transaction/:
+    post:
+      tags:
+        - cash-services > shared-transaction > create
+      summary: 6. Shared Transaction create
+      description: This API used to create shared transaction
+      servers:
+      - url: 'https://cash.2-retailgear.org/api/v1'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                {
+                    "iBusinessId": "5b98f433d7cbaf223023dc93",
+                    "iLocationId": "63bee4efb5144956c47b009a",
+                    "iWorkstationId": "64744e412b0c6119e60a1899",
+                    "iBusinessPartnerId": "66210dc0f41e58b89c7e7980",
+                    "iBusinessPartnerLocationId": "63516306683446bf3f90403f",
+                    "iBusinessLocationId": "623b6d840ed1002890334456",
+                    "aItems": [
+                        {
+                            "productNumber": "ProductId 1 Feb added Manually",
+                            "supplierDescription": "",
+                            "sellingPrice": 199,
+                            "nVatRate": 9,
+                            "purchasePrice": 99,
+                            "oBusinessBrand": {},
+                            "oArticleGroup": {},
+                            "nQuantity": 1,
+                            "EAN": "",
+                            "nMargin": 1.52,
+                            "gift": false,
+                            "ship_cost": false
+                        }
+                    ]
+                }
+      parameters:
+        - name: x-auth-type
+          in: header
+          schema:
+            type: string
+          example: 'x-auth-type'
+          required: true
+        - name: x-access-key
+          in: header
+          schema:
+            type: string
+          example: '123456'
+          required: true
+        - name: x-secret-key
+          in: header
+          schema:
+            type: string
+          example: '123456789101112131415'
+          required: true
+        - name: organization-id
+          in: header
+          schema:
+            type: string
+          example: 'your organization id '
+          required: true
+        - name: iBusinessId
+          in: header
+          schema:
+            type: string
+          example: 'your business id '
+          required: true
+      responses:
+        '200':
+          description: Successful response
+
+  /shared-transaction/detail/{iSharedTransactionId}:
+    get:
+      tags:
+        - cash-services > shared-transaction > detail
+      summary: 7. Shared Transaction detail
+      description: This API used to get the details of shared transaction on the basis of id
+      servers:
+      - url: 'https://cash.2-retailgear.org/api/v1'
+      parameters:
+        - name: x-auth-type
+          in: header
+          schema:
+            type: string
+          example: 'x-auth-type'
+          required: true
+        - name: x-access-key
+          in: header
+          schema:
+            type: string
+          example: '123456'
+          required: true
+        - name: x-secret-key
+          in: header
+          schema:
+            type: string
+          example: '123456789101112131415'
+          required: true
+        - name: organization-id
+          in: header
+          schema:
+            type: string
+          example: 'your organization id '
+          required: true
+        - name: iSharedTransactionId
+          in: path
+          schema:
+            type: string
+          example: 'your sharedTransaction id'
+          required: true
+      responses:
+        '200':
+          description: Successful response
+
+  /shared-transaction/detail/{test}:
+    get:
+      tags:
+        - cash-services > shared-transaction > test > version > 1
+      summary: 8. Shared Transaction detail test 1 version
+      description: This API used to get the details of shared transaction on the basis of id
+      servers:
+      - url: 'https://cash.2-retailgear.org/api/v1'
+      parameters:
+        - name: x-auth-type
+          in: header
+          schema:
+            type: string
+          example: 'x-auth-type'
+          required: true
+        - name: x-access-key
+          in: header
+          schema:
+            type: string
+          example: '123456'
+          required: true
+        - name: x-secret-key
+          in: header
+          schema:
+            type: string
+          example: '123456789101112131415'
+          required: true
+        - name: organization-id
+          in: header
+          schema:
+            type: string
+          example: 'your organization id '
+          required: true
+        - name: test
+          in: path
+          schema:
+            type: string
+          example: 'your sharedTransaction id'
+          required: true
+      responses:
+        '200':
+          description: Successful response
+
+  /shared-transaction/detail/{test2}:
+    get:
+      tags:
+        - cash-services > shared-transaction > test > version > 2
+      summary: 9. Shared Transaction detail test 1 version
+      description: This API used to get the details of shared transaction on the basis of id
+      servers:
+      - url: 'https://cash.2-retailgear.org/api/v1'
+      parameters:
+        - name: x-auth-type
+          in: header
+          schema:
+            type: string
+          example: 'x-auth-type'
+          required: true
+        - name: x-access-key
+          in: header
+          schema:
+            type: string
+          example: '123456'
+          required: true
+        - name: x-secret-key
+          in: header
+          schema:
+            type: string
+          example: '123456789101112131415'
+          required: true
+        - name: organization-id
+          in: header
+          schema:
+            type: string
+          example: 'your organization id '
+          required: true
+        - name: test2
+          in: path
+          schema:
+            type: string
+          example: 'your sharedTransaction id'
+          required: true
+      responses:
+        '200':
+          description: Successful response

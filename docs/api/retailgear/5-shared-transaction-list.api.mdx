@@ -1,0 +1,71 @@
+---
+id: 5-shared-transaction-list
+title: "5. Shared Transaction List"
+description: "This API fetches the shared transaction list"
+sidebar_label: "5. Shared Transaction List"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VcFu2zAM/RWBpw2w69hp1taHAu2wQ4EBK9rsFORAy0yszrFUSU6bGfn3gY7TOckWYB3iiw1J5KMe+Z4b8Dh3kE5AoitCR3apJDlxLVyBlvLQW6wcSq90Ja5FqZyHaQA5OWmV4VVIYVwoJ27u78SMvCzICV9QFy/68W10AAxClkEbqG0JKRTeG5dGEddwloSWPKpyTmjPtJ1HaFS0jGE9DcDSc03O3+p8BWkDUleeKs+faEypJDJO9OS4rAacLGiB/OVXhiAFnT2R5BLoFRemJN5St7VTFTl3l0MKo+zqcnY+HOYXMsNZkgwHyTCXV0OOGW+SmNrKAh2F2uZkQ1czMllY8xOAQYsL8tsLVrjgoNcQa1+EbR0BKGatIMzJMh/7ZTpvVTWHda/OvQTMg7KUQ+ptTeugjyMlORf+oNX7gOJkeD76dBzDkbTk/xfj4vIqHsRxnMTD+DweHYPUdo6V+tm2N1T5+1BXurain0moXBxD7Y/G+xGzLsmf0dqhdkZXjhxnSwYDfu0K7LFumzqrS7E9DDxrC/KF5rE1ulWWQV9ACtGhdqNOeyyNh98i+nIKHTBVM91So3zLw8OboMWNMbDvH/3t+zsIgO2h3UpYUNr5BbaC7voyOhOPG3cZ99zl6+aGO6l7FvGvLtW11dOrj0yJquKLtXbVdDxP4JBnCGDrkQX3JJ1A02To6Lst12tefq7JriCdTANYolWYMUOT6TrYzha7Rq4cb+SQzrB0dORWHx66efoo/lY0y3TfQJZY1nwSeNxPg9b3odPD7VjSqeEO7ejUiLtWtIO2OfB5kzMc7/b34LfIhvNmG/ffHscQQNb9Thc65xiLL+xT+MIIAei27tac2rUGSqzmNc757CYnP78ArXzN0w==
+sidebar_class_name: "post api-method"
+info_path: docs/api/retailgear/retailgear-app
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"5. Shared Transaction List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/shared-transaction/list"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API fetches the shared transaction list
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"x-auth-type","in":"header","schema":{"type":"string"},"example":"x-auth-type","required":true},{"name":"x-access-key","in":"header","schema":{"type":"string"},"example":"123456","required":true},{"name":"x-secret-key","in":"header","schema":{"type":"string"},"example":"123456789101112131415","required":true},{"name":"organization-id","in":"header","schema":{"type":"string"},"example":"your organization id ","required":true},{"name":"iBusinessId","in":"header","schema":{"type":"string"},"example":"your business id ","required":true}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"iBusinessId":"5b98f433d7cbaf223023dc93","eType":"purchase-order-supplier"}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response"}}}
+>
+  
+</StatusCodes>
+
+
+      
