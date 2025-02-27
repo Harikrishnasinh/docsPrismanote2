@@ -1,22 +1,7 @@
 require('dotenv').config();
-const path = require('path');
-const fs = require('fs');
 
 const docType = process.env.REACT_APP_DOC_TYPE;
 const apiVersion = process.env.REACT_APP_API_VERSION || '1.0.0';
-
-console.log('DOC_TYPE:', docType); // For debugging
-console.log('api_version:', apiVersion); // For debugging
-
-/** @type {import('@docusaurus/types').Config} */
-
-// Update OpenAPI spec with the version in any introduction
-const openApiPath = path.join(__dirname, '/static/retailgearApp.yaml');
-const openApiSpec = fs.readFileSync(openApiPath, 'utf8');
-const updatedSpec = openApiSpec.replace('${API_VERSION}', apiVersion);
-
-// Write the updated spec
-fs.writeFileSync(path.join(__dirname, '/static/retailgearApp.generated.yaml'), updatedSpec);
 
 const config = {
   title: 'My Site',
@@ -165,7 +150,7 @@ const config = {
             },
           },
           retailgearApp: {
-            specPath: "static/retailgearApp.generated.yaml",
+            specPath: "static/retailgearApp.yaml",
             outputDir: "docs/api/retailgear",
             sidebarOptions: {
               groupPathsBy: "tag",

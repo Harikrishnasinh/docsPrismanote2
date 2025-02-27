@@ -54,54 +54,6 @@ const sidebar: SidebarsConfig = {
         },
       ],
     },
-    {
-      type: "category",
-      label: "cash-services > shared-transaction > list",
-      items: [
-        {
-          type: "doc",
-          id: "api/retailgear/5-shared-transaction-list",
-          label: "5. Shared Transaction List",
-          className: "api-method post",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "cash-services > shared-transaction > create",
-      items: [
-        {
-          type: "doc",
-          id: "api/retailgear/6-shared-transaction-create",
-          label: "6. Shared Transaction create",
-          className: "api-method post",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "cash-services > shared-transaction > detail",
-      items: [
-        {
-          type: "doc",
-          id: "api/retailgear/7-shared-transaction-detail",
-          label: "7. Shared Transaction detail",
-          className: "api-method get",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "cash-services > shared-transaction > test > version > 1",
-      items: [
-        {
-          type: "doc",
-          id: "api/retailgear/8-shared-transaction-detail-test-1-version",
-          label: "8. Shared Transaction detail test 1 version",
-          className: "api-method get",
-        },
-      ],
-    },
   ],
 };
 
