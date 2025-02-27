@@ -1,0 +1,71 @@
+---
+id: 4-transaction-list
+title: "4. Transaction List"
+description: "This API fetches the transaction list"
+sidebar_label: "4. Transaction List"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVdtq20AQ/RUxTy3I1s12Yj0E4l7AUKiJ3Sfjh7E0tjbRZbO7cuIK/3uZlZNaDg0lJVC9SOxlzsyZOUcNGNxqiJeQoM56mtROJKSdK8coLDUmRlSlc+XkQhtYuZCSTpSQvAoxLDKhnevZ1NmQSTLSjsmoc9Fec4HDkmKYBmqVQwyZMVLHnseo/bCnyKDIt4SqX6mth1J4uwAOKxcU3dekzaRK9xA3kFSlodLwJ0qZiwQZx7vVnE8DOsmoQP4ye0kQQ7W+pYRToEcsZE68JSa1FiVpPU0hhuF6fLkZRFF6kaxxE4aRH0ZpMo7AhfVUf7aJ3dB9LRRBbFRNLuSiEAbiwHeh+ipyQ2qy7wSeoTIlKRt/NBhFw2g4DscXgT8YjX0fkTBYw8EFfSckxP6BHxckKizIPBFVYsEVPPawNlnP1uOCYNozwpQU83perjZKlFsO/VzvWQDVlpK2tRzcU5wkIa17d7R/G1AQRoPh6HUMTYki868YF5fjwA+CIAyiYBAMX4Os1BZL8dOOSU+kb0PdV7VyTiM5InVeotpx1bIqNWmOGPo+v7qamdeW5k2dO0+HgbtfkMkqHhhZWc1INBnE4J3IyTvKiaf95rcuvvzPo818byrLrzCWzHnNwiXlTMKJcy0lnLtK98BsCi6we7SbQd/v+wzANBVoVX9s9aDvLE6851tLVif2iYH8tXkd58LQo/FkjqJkdOtizbFJSzi5Bkxia5YZdzJeQtOsUdMPlR8OvHxfk9pDvFy5sEMlcM20LFcH92kqWf2p0LyRQrzBXNMrdXw4tjD96PwpW5bbuRHsMK/5JLBY3gft1E/eH65jLe8N99JWOojtoU9t3N6iy/iLHxcbx7P8Z9/nCxbo8YdXVCnfUfjAfoMPjOBCZXO3JmPXGsix3Na45bNtTH5+AeAmn7Y=
+sidebar_class_name: "post api-method"
+info_path: docs/api/supplier/supplier-b-2-b-app
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"4. Transaction List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/transaction/list"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API fetches the transaction list
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"x-auth-type","in":"header","schema":{"type":"string"},"example":"x-auth-type","required":true},{"name":"x-access-key","in":"header","schema":{"type":"string"},"example":"123456","required":true},{"name":"x-secret-key","in":"header","schema":{"type":"string"},"example":"123456789101112131415","required":true},{"name":"organization-id","in":"header","schema":{"type":"string"},"example":"your organization id ","required":true}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"iBusinessId":"5b98f433d7cbaf223023dc93","bIsDetailRequire":true,"limit":10,"oFilterBy":{"iBusinessPartnerId":"646353592971046900aaea1b"},"skip":0}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: 2-supplier-stock-list
+title: "2. Supplier Stock List"
+description: "This API fetches the supplier stock list for a given business."
+sidebar_label: "2. Supplier Stock List"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlVk1v2zgQ/SvEnHYB2taHncQ6FKgXXSBAgTXqLPZg+ECRI4uNLKok5cQr6L8XIyuulCIBtm1Oq4tlfsx7nDfzqAa82DtItiCNxYlDe9QSHXvHnDfyflJo52HHQaGTVldemxISuMu1Y+/XtyxDL3N0zOfIXF1VhUZ73sloJ8uMZYLt9RFLltZOl+jcFDgQDlrCbaC2BSSQe1+5ZDYjGtNwYtELXexR2Kmx+5mo9OwYQrvjYPFLjc6vjDpB0oA0pcfS06sgfCmI4+yzI6INOJnjQdCbP1UICZj0M0oPHPBRHKoCaUqvemq3ChJYpMubbB7H6lqmIouiOIhiJZcxcNAfzTl+t/AqTlFlyyxdhPP5cnEl59dicRUpWtjNL0JchqlS4mYZq/kikiKKFzIADukmNw9ra1Qt/T/a5xtKGSSZKBxykO744bEy1l9GCn3QHpIw4GD+1IVHuzqNmK+F9SVa4rV9GXjXcnD3uoIkaOnhUAkrDuiftCjFgZL0OBG1zyddyjhokjxHodCSdM8z6rzV5R7aQUqfBSDJtEUFibc1tnyIIyU6N7nH048BhVE8X1y9juFQWvQ/i3F9swyDMAyjMA7n4eI1SGP3otT/dpUy0erHUE+mtmwYiWnFXkMdVnGPWAmf/ye8SwzW0X6G1XWfq0zp0FG0KAjoZ+wNm7qTNKsL9rQYqNIO6HNDbVEZR/3XcUtg9s1nZs3gCC1woCb+9K3dP/zPO5ZEzUwno/adZpsny11FK/a+quC5UY8XrG+BA/nueTKcBtOAioAUOYjOL/taiqbssrU7KfuoO9VG4Qfu+/NXQl+aHh/9rCqELolZdzc0fa1sYXAncUiGRbDjkFNdJVtomlQ4/NsWbUvDX2q0J0i2Ow5HYbVIKXPbBpR29K4uir14tN8+9W3wO3uJZz8oSrKYoyhq+gccyHPGndmSor0T/HIaZ7ix+V7YkFW8DdrQw98ebmTnbw33vZWPEM+L/jjHndyNM/7d9wgZ6MUG139t7shX+u+Yg1G0x4oH8l3xcK4f03HvzLYba6AQ5b4We1p7jknPV/hqP9I=
+sidebar_class_name: "post api-method"
+info_path: docs/api/supplier/supplier-b-2-b-app
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"2. Supplier Stock List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/stock-list/{iBusinessId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API fetches the supplier stock list for a given business.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"x-auth-type","in":"header","schema":{"type":"string"},"example":"x-auth-type","required":true},{"name":"x-access-key","in":"header","schema":{"type":"string"},"example":"123456","required":true},{"name":"x-secret-key","in":"header","schema":{"type":"string"},"example":"123456789101112131415","required":true},{"name":"organization-id","in":"header","schema":{"type":"string"},"example":"your organization id ","required":true},{"name":"iBusinessId","in":"path","schema":{"type":"string"},"example":"your iBusiness id","required":true}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"iBusinessId":"5b98f433d7cbaf223023dc93","iLocationId":"63bedf9fb5144956c47a562d","id":"651e91bdda893d452ca235c0","bShowProductWithStock":false,"csvExport":false,"limit":10,"oFilterBy":{"iBusinessPartnerId":["651e91bdda893d452ca235c0"]},"skip":0}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response"}}}
+>
+  
+</StatusCodes>
+
+
+      
